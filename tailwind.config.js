@@ -8,13 +8,14 @@ module.exports = {
     extend: {
       colors: {
         theme1: "#111111",
-        theme2: "#72E338",
+        theme2: "#FF6A22",
+        formColor: "#212121",
+        formBorder: "#414141",
         primary: {
           DEFAULT: '#FF592C;',
         },
         secondary: {
           DEFAULT: '#3772FF',
-
         },
         gray: {
           DEFAULT: '#ffffff',
@@ -27,6 +28,9 @@ module.exports = {
           700: '#23262F',
           800: '#141416'
         }
+      },
+      backgroundImage: {
+        'server-bg-d': "url('./assets/server-bg-d.jpg')",
       },
       fontFamily: {
         'montserrat': ['Montserrat'],
