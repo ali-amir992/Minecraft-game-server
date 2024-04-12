@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: false, // or 'media' or 'class'
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}'
@@ -52,5 +53,12 @@ module.exports = {
       '4xl': '2160px', // only need to control product grid mode in ultra 4k device
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

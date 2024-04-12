@@ -1,7 +1,13 @@
 import { } from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import './App.css'
-import GameServer from './components/GameServer'
+import GameServer from './Pages/GameServer'
+import Admin from './Pages/Admin'
+import Dashboard from './components/dashboard/Dashboard'
+import Forms from './components/forms/Forms.jsx'
+import Template from './components/template/Template.jsx'
+import Servers from './components/tables/Servers.jsx'
+import Users from './components/tables/Users.jsx'
 
 function App() {
 
@@ -9,12 +15,35 @@ function App() {
     <>
       <Routes>
         <Route path="/gameserver" element={<GameServer />} />
+        <Route path="/admin" element={<Admin />} >
+          <Route path="dashboard" element={
+            <>
+              <Template>
+                <Dashboard />
+              </Template>
+            </>
+          } />
+          <Route path="forms" element={<>
+            <Template>
+              <Forms />
+            </Template>
+          </>} />
+
+          <Route path="servers" element={<>
+            <Template>
+              <Servers />
+            </Template>
+          </>} />
+          <Route path="users" element={<>
+            <Template>
+              <Users />
+            </Template>
+          </>} />
+          <Route path="*" element={<Navigate to="dashboard" />} />
+        </Route>
 
       </Routes>
-      {/* <div className="w-full bg-gradient-to-r  from-neutral-900 to-slate-800">
-        <h1 className="text-5xl text-white font-primary text-green">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perferendis sit quisquam, doloribus in illo magnam adipisci dolor nulla eligendi ratione repudiandae nihil dolorum repellendus voluptatum ad nemo ex at.</h1>
-        <h1 className="text-5xl  text-theme2 font-secondry ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perferendis sit quisquam, doloribus in illo magnam adipisci dolor nulla eligendi ratione repudiandae nihil dolorum repellendus voluptatum ad nemo ex at.</h1>
-      </div> */}
+
     </>
   )
 }

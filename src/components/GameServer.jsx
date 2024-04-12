@@ -18,7 +18,7 @@ const GameServer = () => {
     };
 
     return (
-        <div className='bg-server-bg-d h-screen w-screen flex md:flex-row flex-col items-center justify-center p-4 md:p-12 md:gap-x-4'>
+        <div className='bg-server-bg-d h-full w-full flex md:flex-row flex-col items-center justify-center p-4 md:p-12 md:gap-x-4'>
 
             <div className="flex flex-col items-start justify-start w-full gap-y-4">
 
@@ -94,7 +94,7 @@ const GameServer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="form-container xs:w-full md:w-1/3 rounded-lg flex flex-col justify-center items-center gap-y-4 bg-formColor">
+                    <div className="form-container xs:w-full md:w-1/3 rounded-xl flex flex-col justify-center items-center gap-y-4 bg-formColor">
                         <div className="flex flex-row items-center gap-x-3"><h1 className='text-2xl font-secondry'>Need Help</h1>                <i class="fa-solid fa-question fa-2xl"></i>
                         </div>
                         <button className="text-xl font-secondry px-2 py-1 rounded-md hover:bg-theme2 border border-formBorder  text-white">Go to FAQs</button>
