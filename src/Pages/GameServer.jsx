@@ -1,10 +1,14 @@
 import React from 'react'
-import GameServer from '../components/GameServer'
+import Server from '../components/Server'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
-const Server = () => {
+const GameServer = () => {
     return (
         <>
-            <GameServer />
+            <Navbar />
+            <Server />
+            <Footer />
         </>
     )
 }

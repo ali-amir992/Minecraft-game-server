@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CSS/GameServer.css'
 
-const GameServer = () => {
+const Server = () => {
     const [selectedOption, setSelectedOption] = useState('');
 
     // Onchange handler for dropdown select
@@ -18,7 +18,7 @@ const GameServer = () => {
     };
 
     return (
-        <div className='bg-server-bg-d h-full w-full flex md:flex-row flex-col items-center justify-center p-4 md:p-12 md:gap-x-4'>
+        <div className='bg-server-bg-d h-full w-full flex md:flex-row flex-col items-center justify-center p-4 md:p-24 md:gap-x-4'>
 
             <div className="flex flex-col items-start justify-start w-full gap-y-4">
 
@@ -107,4 +107,4 @@ const GameServer = () => {
     );
 }
 
-export default GameServer;
+export default Server;

@@ -3,17 +3,21 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import './App.css'
 import GameServer from './Pages/GameServer'
 import Admin from './Pages/Admin'
+import HomePage from './Pages/HomePage.jsx'
 import Dashboard from './components/dashboard/Dashboard'
 import Forms from './components/forms/Forms.jsx'
 import Template from './components/template/Template.jsx'
 import Servers from './components/tables/Servers.jsx'
 import Users from './components/tables/Users.jsx'
+import About from './Pages/About.jsx'
 
 function App() {
 
   return (
     <>
       <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/gameserver" element={<GameServer />} />
         <Route path="/admin" element={<Admin />} >
           <Route path="dashboard" element={

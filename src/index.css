@@ -1,3 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Navbar Styles */
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.transition-transform {
+    transition-property: transform;
+}
+
+.transition-max-h {
+    transition-property: max-height;
+}
+
+/* navbar.css */
+.transition-max-h {
+    transition-property: max-height;
+    transition-duration: 0.3s;
+    /* Adjust the duration as needed */
+    transition-timing-function: ease-in-out;
+    /* Adjust the timing function as needed */
+}
+
+/* navbar.css */
+.menu-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    /* Adjust the duration and timing function as needed */
+}
+
+.menu-container.open {
+    max-height: 999px;
+    /* or any other appropriate value to fully expand the menu */
+}
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("./assets/heroImg.webp");
+    background-repeat: no-repeat;
+    /* Prevent background image from repeating */
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add this CSS to your stylesheet */
+
+/* Shining effect */
+/* Shining effect */
+/* index.css or navbar.css */
+@media (min-width: 768px) and (max-width: 883px) {
+    .navbar .text-lg {
+        font-size: 14px;
+        /* Smaller font size for better fit */
+    }
+
+    .navbar img {
+        width: 250px;
+        /* Adjust logo size for medium screens */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .navbar .flex.items-center {
+        margin-right: 5px;
+        /* Adjust spacing around buttons and links */
+        padding-top: 0;
+        /* Less padding on top */
+    }
+
+    .navbar button {
+        padding: 8px 10px;
+        /* Smaller button padding */
+    }
+}
+
+.custom-input {
+    border: 2px solid #cccccc;
+    /* Default border color */
+    outline: none;
+    /* Removes the default focus outline */
+}
+
+.custom-input:focus {
+    border-color: #FF6A22;
+    /* Changes border color on focus */
+}
+
+.about {
+    /* Assuming .about is the class of your section */
+    position: relative;
+    z-index: 1;
+}
+
+.about {
+    /* Assuming .about is the class of your section */
+    position: relative;
+    z-index: 1;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #111111, #FF6A22, #111111);
+    opacity: 0.12;
+    /* Adjust for desired visibility of the background image */
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+}
