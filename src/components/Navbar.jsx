@@ -80,11 +80,11 @@ const Navbar = () => {
       <div className={`${isOpen ? 'max-h-full' : 'max-h-0'} md:hidden overflow-hidden transition-max-h duration-300 ease-in-out absolute w-full bg-theme1`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-max-h duration-300 ease-in-out">
           <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block font-primary px-3 py-2 rounded-md text-base font-medium">VPS</a>
-          <Link to="/about" className="text-white hover:text-theme2 px-3 py-2 rounded-md text-lg font-medium font-primary">
+          <Link to="/about" className="text-gray-300 hover:text-theme2 px-3 py-2 rounded-md text-lg font-medium font-primary">
             About Us
           </Link>
           <Link to='/gameserver' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 font-primary rounded-md text-base font-medium">Server</Link>
-          <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 font-primary rounded-md text-base font-medium">Login</a>
+          <Link to='/admin/dashboard' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 font-primary rounded-md text-base font-medium">Login</Link>
         </div>
       </div>
 
